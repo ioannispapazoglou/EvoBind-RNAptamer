@@ -1,0 +1,13 @@
+source leaprc.protein.ff14SB
+source leaprc.RNA.OL3
+
+protein = loadpdb "protein_prep.pdb"
+rna = loadpdb "aptamer_prep.pdb"
+
+complex = combine {protein rna}
+
+saveamberparm complex complex.prmtop complex.inpcrd
+saveamberparm protein protein.prmtop protein.inpcrd
+saveamberparm rna rna.prmtop rna.inpcrd
+
+quit

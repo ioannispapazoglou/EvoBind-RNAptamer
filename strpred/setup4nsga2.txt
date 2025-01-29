@@ -1,0 +1,22 @@
+Ioannis@DurdagiLab reminds you:
+
+RhoFold+ is an independent RNA structure prediction tool officially distributed in https://github.com/ml4bio/RhoFold . Here, we utilize its LM-assisted structure prediction mode for its superior balance between speed and accuracy (3rd party).
+
+Please set it up as outlined below to integrate it as the default option for the NSGA2 algorithm, or download it separately and specify its location (weights and inference) in rhofold.py within the NSGA2 repository. Additionally, ensure that the provided ./inference4nsga2.py script is placed in your RhoFold+ scripts directory."
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Suggested installation:
+
+~For RhoFold+ scripts:
+
+git clone https://github.com/ml4bio/RhoFold.git
+mv RhoFold/* ./
+rm -rf RhoFold/
+
+~For RhoFold+ weights:
+
+wget https://proj.cse.cuhk.edu.hk/aihlab/RhoFold/api/download?filename=RhoFold_pretrained.pt -O RhoFold_pretrained.pt
+mv RhoFold_pretrained.pt pretrained/
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+

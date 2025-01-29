@@ -1,0 +1,9 @@
+Ioannis@DurdagiLab reminds you:
+
+Hdock docking algorithm and RASP scoring function are independent works that we utilize in our developed NSGA-II algorithm.
+
+Use the link bellow to download "hdock" and "createpl" pre-compiled executables and locate in 3pbins/ directory. 
+http://huanglab.phys.hust.edu.cn/software/hdocklite/
+
+Use the link bellow to download "rasp_fd" pre-compiled executable and locate in 3pbins/ directory. 
+http://melolab.org/webrasp/download.php
