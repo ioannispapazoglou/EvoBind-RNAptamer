@@ -106,7 +106,7 @@ def main():
     parser.add_argument("--hdockspacingstep", type=float, default=2.0, help="HDock spacing step size (default: 2.0).")
     parser.add_argument("--hdockanglestep", type=float, default=30.0, help="HDock angle step size (default: 30.0).")
     parser.add_argument("--proteintarget", type=str, required=True, help="Path to the protein-target (.pdb) file.")
-    parser.add_argument("--allgenerationsfolder", type=str, default="./nsga2autopilot/", help="Path to the output folder (default: ./nsga2autopilot/).")
+    parser.add_argument("--outputfolder", type=str, default="./nsga2autopilot/", help="Path to the output folder (default: ./nsga2autopilot/).")
 
     args = parser.parse_args()
 
@@ -119,10 +119,10 @@ def main():
                         args.hdockspacingstep,
                         args.hdockanglestep, 
                         args.proteintarget, 
-                        args.allgenerationsfolder)
+                        args.outputfolder)
 
     algorithm = NSGA2(pop_size=args.population,
-                    mutation=AdaptiveMutation(directory=args.allgenerationsfolder, 
+                    mutation=AdaptiveMutation(directory=args.outputfolder, 
                                                 k=args.kmer, 
                                                 minlength=args.minlength, 
                                                 maxlength=args.maxlength)
