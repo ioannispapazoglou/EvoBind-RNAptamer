@@ -24,7 +24,7 @@ Usage instructions and installation steps for Miniconda / Anaconda refer to the 
 
 python3 inference.py --proteintarget ./test/ang2.pdb --outputfolder ./output/ 
 
-To experiment abroad the default parameters: python3 inference.py --help
+To experiment further from the default parameters: python3 inference.py --help
 
 Easy jupyter notebook inference is also available.
 
